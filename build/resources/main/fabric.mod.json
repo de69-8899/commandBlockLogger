@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "commandblocklogger",
+  "version": "1.0.0",
+  "name": "CommandBlockLogger",
+  "description": "Clean, structured, searchable command block execution logs for Minecraft servers.",
+  "authors": ["CommandBlockLogger contributors"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.commandblocklogger.CommandBlockLoggerMod"
+    ]
+  },
+  "mixins": [
+    "commandblocklogger.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": ">=1.21.8",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
