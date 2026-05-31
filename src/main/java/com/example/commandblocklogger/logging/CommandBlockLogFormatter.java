@@ -85,6 +85,30 @@ public final class CommandBlockLogFormatter {
         return GSON.toJson(map);
     }
 
+
+    public static String consoleSummary(CommandBlockExecutionEvent e, int count) {
+        String msg = e.failed() ? e.error() : e.output();
+        msg = normalizeConsoleMessage(msg);
+
+        return "%s x%d %s %s %d %d %d | %s | %s"
+                .formatted(
+                        e.status(),
+                        count,
+                        e.commandBlockType(),
+                        e.world(),
+                        e.pos().getX(),
+                        e.pos().getY(),
+                        e.pos().getZ(),
+                        escapeOneLine(e.command()),
+                        escapeOneLine(msg)
+                );
+    }
+
+    private static String normalizeConsoleMessage(String value) {
+        if (value == null) return "";
+        return value.replaceFirst("^\\[\\d{2}:\\d{2}:\\d{2}\\]\\s*", "").trim();
+    }
+
     private static String emptySafe(String value) {
         return value == null || value.isBlank() ? "<empty>" : value;
     }

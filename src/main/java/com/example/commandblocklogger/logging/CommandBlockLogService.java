@@ -191,10 +191,14 @@ public final class CommandBlockLogService {
         }
 
         if (cfg.writeConsoleLogs) {
+            String consoleLine = cfg.compressedConsoleLogs
+                    ? CommandBlockLogFormatter.consoleSummary(event, count)
+                    : "\n" + CommandBlockLogFormatter.human(event, count);
+
             if (event.failed()) {
-                LoggerFactory.getLogger(CommandBlockLoggerMod.MOD_ID).warn("\n{}", CommandBlockLogFormatter.human(event, count));
+                LoggerFactory.getLogger(CommandBlockLoggerMod.MOD_ID).warn("{}", consoleLine);
             } else {
-                LoggerFactory.getLogger(CommandBlockLoggerMod.MOD_ID).info("\n{}", CommandBlockLogFormatter.human(event, count));
+                LoggerFactory.getLogger(CommandBlockLoggerMod.MOD_ID).info("{}", consoleLine);
             }
         }
     }

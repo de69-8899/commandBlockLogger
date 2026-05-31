@@ -25,6 +25,7 @@ public final class CommandBlockLoggerConfig {
     public boolean ignoreSuccessfulExecutions = false;
     public boolean writeJsonLogs = true;
     public boolean writeConsoleLogs = true;
+    public boolean compressedConsoleLogs = true;
     public boolean writeHumanReadableLogs = true;
     public boolean writeCompactLogs = false;
     public int maxLogFiles = 30;
