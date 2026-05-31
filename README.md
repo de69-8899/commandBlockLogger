@@ -4,7 +4,7 @@ Production-style Fabric mod for clean, structured, searchable command block logs
 
 ## Target
 
-- Minecraft Java Edition 1.21.8
+- Minecraft Java Edition 1.21.11
 - Fabric Loader 0.16+
 - Java 21
 - Dedicated servers and integrated singleplayer server
@@ -40,7 +40,7 @@ build/libs/commandblocklogger-1.0.0.jar
 
 ## Install
 
-1. Install Fabric Loader for Minecraft 1.21.8.
+1. Install Fabric Loader for Minecraft 1.21.11.
 2. Put Fabric API in the server `mods/` folder.
 3. Put `commandblocklogger-1.0.0.jar` in `mods/`.
 4. Start the server once.
