@@ -72,7 +72,7 @@ build/libs/commandblocklogger-1.0.0.jar
 }
 ```
 
-## Example human output
+## Example console output
 
 ```text
 [CommandBlockLogger]
